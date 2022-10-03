@@ -1,0 +1,13 @@
+.titulo{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.subTitulo{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1%;
+    text-align: center;
+    color: green;
+};

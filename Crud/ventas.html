@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <title>Ventas</title>
+</head>
+<body onload="mostrarNav('navVentas'); mostrarVentas()" style="background-color:rgba(246, 247, 242, 0.938) ;">
+    <header id="navVentas"></header>
+
+
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-4" style="padding:10px">
+                <h3 class="titulo2">Ventas</h3>
+
+                <div>
+                    <label>Id:</label>
+                    <input type="number" id="idVenta" placeholder="Digite el id" class="form-control">
+                </div>
+                <div>
+                    <label>Fecha:</label>
+                    <input type="date" id="fecha" placeholder="aaaa-mm-aaaa" class="form-control">
+                </div>
+                <div>
+                    <label>Nombre del Cliente:</label>
+                    <input type="text" id="nombreCliente" placeholder="Nombre del Cliente" class="form-control">
+                </div>
+                <div>
+                    <label>Nombre del Producto:</label>
+                    <input type="text" id="nombreProducto" placeholder="Nombre del Producto" class="form-control">
+                </div>
+                <div>
+                    <label>Valor:</label>
+                    <input type="number" id="valor" placeholder="Valor del producto" class="form-control">
+                </div>
+                <div>
+                    <label>Cantidad:</label>
+                    <input type="number" id="cantidad" placeholder="Digite un número entero" class="form-control">
+                </div>           
+
+
+                <button type="submit" type="submit" 
+                class="btn mt-2" style="background-color:#015c8e; color: white;" onclick="crearVenta()">Crear</button>
+                <button type="submit" type="submit" 
+                class="btn mt-2" id="buttonEditar" style="background-color:#dff04a; color: white; display: none;" onclick="editarVenta()">Guardar</button>
+                
+
+                </form>
+            </div>
+
+            <div class=" col-8 ">
+                <table datatable class="table table-striped table-hover" [dtOptions]="dtOptions">
+                    <thead>
+                        <tr>
+                         
+                            <th>Id</th>
+                            <th>Fecha</th>
+                            <th>Nombre del cliente</th>
+                            <th>Nombre del Producto</th>
+                            <th>Valor</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Neto con IVA</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                       
+                    </tbody>
+                </table>
+                <br><br><br><br>
+    
+                
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./ventas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

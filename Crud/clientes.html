@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body onload="mostrarNav('navClientes'); mostrarClientes()" style="background-color:rgba(246, 247, 242, 0.938) ;">
+
+    <header id="navClientes"></header>
+
+   
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-4" style="padding:10px">
+                <h3 class="titulo2">Clientes</h3>             
+    
+                    <div>
+                        <label>Id:</label>
+                        <input type="number" id="id" placeholder="Digite el id"
+                            class="form-control">
+                    </div>                    
+                    <div>
+                        <label>Nombre del Cliente:</label>
+                        <input type="text" id="nombreCliente" placeholder="Nombre del Cliente"
+                            class="form-control" >
+                    </div>
+                    <div>
+                        <label>Apellido:</label>
+                        <input type="text" id="apellidoCliente" placeholder="Apellido"
+                            class="form-control" >
+                    </div>
+                    <div>
+                        <label>Dirección:</label>
+                        <input type="text" id="direccion" placeholder="Dirección"
+                            class="form-control">
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="text" id="email" placeholder="Email"
+                            class="form-control" >
+                    </div>
+                    <div>
+                        <label>Ciudad:</label>
+                        <input type="text" id="ciudad" placeholder="Ciudad"
+                            class="form-control" >
+                    </div>              
+                                    
+                    
+    
+                    <div style="display: flex; flex-direction: column;">
+                        <button type="submit" type="submit" 
+                    class="btn mt-2" style="background-color:#015c8e; color: white;" onclick="crearCliente()">Crear</button>
+                    <button type="submit" type="submit" 
+                    class="btn mt-2" id="buttonEditar" style="background-color:#dff04a; color: white; display: none;" onclick="editarCliente()">Guardar</button>
+                    
+    
+                    </div>
+                </form>
+            </div>
+    
+            <div class=" col-8 ">            
+                <table datatable class="table table-striped table-hover" [dtOptions]="dtOptions">
+                    <thead>
+                        <tr>
+                    
+                            <th>Id</th>
+                            <th>Nombre del cliente</th>
+                            <th>Apellido</th>
+                            <th>Dirección</th>
+                            <th>Email</th>
+                            <th>Ciudad</th>                           
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                       
+                    </tbody>
+                </table>
+                <br><br><br><br>
+    
+                
+            </div>
+        </div>
+    </div>
+    <script src="./clientes.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
